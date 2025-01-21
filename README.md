@@ -1,6 +1,6 @@
-# Next.js App Router with TypeScript & Mongoose Template
+# Coding Knowledge Showcase: Next.js Application
 
-This project serves as a boilerplate for building modern web applications using the **Next.js App Router**, **TypeScript**, and **Mongoose** for MongoDB integration. It provides a ready-to-use structure for rapid development.
+This project serves as a learning and demonstration platform to showcase your coding knowledge and principles using **Next.js** with the **App Router** and **TypeScript**. The app includes interactive modules that explain and demonstrate key coding concepts such as state management, hooks, optimisation techniques, and more.
 
 ---
 
@@ -8,7 +8,6 @@ This project serves as a boilerplate for building modern web applications using 
 
 - **TypeScript** for static typing and better developer experience.
 - **Next.js App Router** for building server and client components efficiently.
-- **Mongoose** for MongoDB integration, making database management seamless.
 - **Environment Variable Configuration** for flexible development and deployment.
 
 ---
@@ -30,8 +29,8 @@ Before you start, make sure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/nextjs-typescript-mongoose-template.git
-   cd nextjs-typescript-mongoose-template 
+   git clone https://github.com/yourusername/coding-knowledge.git
+   cd coding-knowledge
 
 2. Install the dependencies:
 
@@ -42,23 +41,16 @@ Before you start, make sure you have the following installed:
     Create a .env.local file in the root directory and add the following variables:
 
     ```env
-    # MongoDB connection URI
-    MONGODB_URI=mongodb://<host>:<port>
-
-    # MongoDB database name
-    MONGO_DATABASE=your_database_name
-
     # Host address (exp: http://localhost:3000)
     NEXT_PUBLIC_API_URL=http://<host>:<port>
 
-    Replace <host>, and <port> with your MongoDB connection details.
+    Replace <host>, and <port> with your connection details.
 
 4. Running Project
-    The included docker-compose.yml file sets up MongoDB and runs the development server. Use the following command to start the project:
+    Use the following command to start the project:
 
     ```bash
-    docker-compose up -d
+    npm run dev
    
 This will:
-•	Spin up a MongoDB instance on localhost:27017.
-•	Start the Next.js development server on http://localhost:3000.
+•	Start the Next.js development server on your host address (http://localhost:3000).
