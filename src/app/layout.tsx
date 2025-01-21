@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer";
 // STYLES
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
+import { Provider } from "jotai";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +32,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Provider>
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow container mx-auto">{children}</main>
             <Footer />
           </div>
+        </Provider>
       </body>
     </html>
   );
