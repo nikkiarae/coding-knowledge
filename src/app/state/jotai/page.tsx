@@ -8,10 +8,10 @@ import { CodeBlock } from "@/components/codeblock";
 import { atom } from "jotai";
 
 // Atom for managing counter
-export const counterAtom = atom<number>(0);
+const counterAtom = atom<number>(0);
 
 // Derived atom for double the counter value
-export const doubleCounterAtom = atom<number>((get) => get(counterAtom) * 2);
+const doubleCounterAtom = atom<number>((get) => get(counterAtom) * 2);
 
 // Code examples
 const basicAtomCode = `

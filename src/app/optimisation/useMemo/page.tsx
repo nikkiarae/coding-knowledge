@@ -69,10 +69,6 @@ const useMemoCode = `
     };
 `;
 
-interface BaseProps {
-  name: string;
-}
-
 const UseMemo: FC = () => {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
@@ -150,7 +146,7 @@ const UseMemo: FC = () => {
         <h1 className="text-2xl font-bold mb-4">What You Are Seeing</h1>
         <p className="mb-4 text-gray-400">
           - When <strong>Regular Computation</strong> is selected, the expensive
-          function runs on every render, even if it doesn't need to.
+          function runs on every render, even if it doesn&apos;t need to.
           <br />
           - When <strong>Memoised Computation</strong> is selected, the
           expensive function only runs when the dependency (<code>count</code>)

@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
-import { MONGO_DATABASE, MONGO_URI, NEXT_PUBLIC_API_URL } from "@/lib/constants/config";
+import { NEXT_PUBLIC_API_URL } from "@/lib/constants/config";
 
 const nextConfig: NextConfig = {
   env: {
-    MONGODB_URI: MONGO_URI,
-    MONGO_DATABASE: MONGO_DATABASE,
     NEXT_PUBLIC_API_URL: NEXT_PUBLIC_API_URL
   },
 };

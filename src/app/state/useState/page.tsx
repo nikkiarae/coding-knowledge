@@ -6,9 +6,7 @@ import { CodeBlock } from "@/components/codeblock";
 const basicCode = `
     import React, { FC, useState } from "react";
 
-    interface CounterProps {}
-
-    const Counter: FC<CounterProps> = () => {
+    const Counter: FC = () => {
       const [count, setCount] = useState<number>(0);
 
       return (
@@ -24,9 +22,7 @@ const basicCode = `
     export default Counter;
 `;
 
-interface CounterProps {}
-
-const UseState: FC<CounterProps> = () => {
+const UseState: FC = () => {
   const [count, setCount] = useState<number>(0);
 
   return (

@@ -39,6 +39,8 @@ const MemoComponent: FC<BaseProps> = memo(({ name }) => {
   return <h5>{name}</h5>;
 });
 
+MemoComponent.displayName = "MemoComponent";
+
 const Memo: FC = () => {
   const [selectedBlock, setSelectedBlock] = useState<"basic" | "memo">("basic");
   const [counter, setCounter] = useState(0);
@@ -104,11 +106,11 @@ const Memo: FC = () => {
         <h3 className="text-2xl font-bold mb-4">What You Are Seeing</h3>
         <p className="mb-4 text-gray-400">
           - When <strong>BaseComponent</strong> is selected, you will see a
-          "BaseComponent Rendered" log in the console every time the counter
+          &quot;BaseComponent Rendered&quot; log in the console every time the counter
           changes, even though the props do not change.
           <br />
           - When <strong>MemoComponent</strong> is selected, you will see
-          "MemoComponent Rendered" only when the props change (e.g., when you
+          &quot;MemoComponent Rendered&quot; only when the props change (e.g., when you
           toggle between the components), not when the counter changes.
         </p>
 
@@ -137,5 +139,7 @@ const Memo: FC = () => {
     </div>
   );
 };
+
+Memo.displayName = "Memo";
 
 export default Memo;

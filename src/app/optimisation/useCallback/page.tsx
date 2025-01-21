@@ -3,6 +3,7 @@
 import React, { FC, useState, useCallback, memo } from "react";
 import { CodeBlock } from "@/components/codeblock";
 
+// Code Blocks
 const basicCode = `
     import React, { FC } from "react";
 
@@ -51,10 +52,12 @@ const callbackCode = `
     };
 `;
 
+// Types
 interface CounterProps {
   onIncrement: () => void;
 }
 
+// Counter Component
 const Counter: FC<CounterProps> = memo(({ onIncrement }) => {
   console.log("Counter Rendered");
   return (
@@ -66,6 +69,9 @@ const Counter: FC<CounterProps> = memo(({ onIncrement }) => {
     </button>
   );
 });
+
+// Add a display name for better debugging
+Counter.displayName = "Counter";
 
 const UseCallback: FC = () => {
   const [count, setCount] = useState(0);
@@ -88,7 +94,7 @@ const UseCallback: FC = () => {
         <h1 className="text-2xl font-bold mb-4">What is useCallback?</h1>
         <p className="mb-4 text-gray-400">
           <code>useCallback</code> is a React hook that memoises a function, so it
-          doesn't get recreated on every render unless its dependencies change.
+          doesn&apos;t get recreated on every render unless its dependencies change.
           It’s helpful when passing functions as props to memoised components, as it
           avoids unnecessary re-renders.
         </p>
@@ -142,7 +148,7 @@ const UseCallback: FC = () => {
         <p className="mb-4 text-gray-400">
           - When the <strong>Regular Callback</strong> is selected, the
           <strong>Counter</strong> component will re-render every time the parent
-          updates, even if the function hasn't changed.
+          updates, even if the function hasn&apos;t changed.
           <br />
           - When the <strong>Memoised Callback</strong> is selected, the
           <strong>Counter</strong> component will not re-render unless the
